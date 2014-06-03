@@ -1,0 +1,21 @@
+{% extends "base3.html" %}
+{% load i18n %}
+{% block title%}開始記錄{% endblock title %}
+{% block main %}
+<form method="post" class="form-horizontal" >
+{% csrf_token %}
+<table>
+	<h4>基本</h4>
+    {{basic_form.as_p}}
+    <h4>身高體重</h4>
+    {{userprofile_form.as_p}}
+    {{weight_form.as_p}}
+    {{pressure_form.as_p}}    
+    {{sleep_form.as_p}}
+    {{exercise_form.as_p}}
+    {{meal_form.as_p}}
+</table>
+<input type="submit" value="Submit">
+</form>
+{% endblock %}
+{% block content%}{% endblock content %}

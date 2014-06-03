@@ -1,0 +1,18 @@
+{% extends "base3.html" %}
+{% load i18n %}
+{% block title%}{% trans "Add another weight" %}{% endblock title %}
+{% block main %}
+<form method="post" class="form-horizontal" >
+<div>
+{% blocktrans %}
+<p>Please add another weight. Timestamp will be added automaticly.</p>
+{% endblocktrans %}
+</div>
+{% csrf_token %}
+<table>
+	{{ form.as_table }}
+</table>
+<input type="submit" value="Submit">
+</form>
+{% endblock main %}
+{% block content%}{% endblock content %}

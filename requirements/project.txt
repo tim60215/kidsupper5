@@ -1,0 +1,4 @@
+Mezzanine>1.2.4
+Cartridge ==0.9.3
+south==0.8.4
+mezzanine_pagedown==0.6

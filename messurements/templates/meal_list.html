@@ -1,0 +1,14 @@
+{% extends "base3.html" %}
+{% load i18n %}
+{% block title%}飲食{% endblock title %}
+{% block main %}
+        {% if output %}
+                <ul>
+                {% for item in output %}
+                        <li>{{ item.date }}: <br>早餐{{ item.breakfast}} {{item.how_much}}<br> {{item.lunch}} {{item.how_much2}}<br> {{item.dinner}} {{item.how_much3}}</li>{% endfor %}
+                </ul>
+        {% else %}
+                <p>{% trans "No data available at the moment" %}</p>
+        {% endif %}
+{% endblock main %}
+{% block content%}{% endblock content %}

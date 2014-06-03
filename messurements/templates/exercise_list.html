@@ -1,0 +1,14 @@
+{% extends "base3.html" %}
+{% load i18n %}
+{% block title%}運動{% endblock title %}
+{% block main %}
+        {% if output %}
+                <ul>
+                {% for item in output %}
+                        <li>{{ item.date }}: 從事{{ item.kind}} 長達 {{ item.how_long}}</li>{% endfor %}
+                </ul>
+        {% else %}
+                <p>{% trans "No data available at the moment" %}</p>
+        {% endif %}
+{% endblock main %}
+{% block content%}{% endblock content %}

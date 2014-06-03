@@ -1,0 +1,21 @@
+{% extends "base3.html" %}
+{% load i18n %}
+{% block title%}今日生活{% endblock title %}
+{% block main %}
+<form method="post" class="form-horizontal" >
+{% csrf_token %}
+<table>
+    <h4>身高體重</h4>
+    {{userprofile_form.as_p}}
+    {{weight_form.as_p}}
+    <h4>睡眠</h4>
+    {{sleep_form.as_p}}
+    <h4>運動</h4>
+    {{exercise_form.as_p}}
+    <h4>飲食</h4>
+    {{meal_form.as_p}}
+</table>
+<input type="submit" value="Submit">
+</form>
+{% endblock %}
+{% block content%}{% endblock content %}

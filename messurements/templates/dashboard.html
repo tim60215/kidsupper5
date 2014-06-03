@@ -1,0 +1,19 @@
+{% extends "base3.html" %}
+{% load i18n %}
+{% block title%}{% trans "Record Dahsboard" %}{% endblock title %}
+
+{% block main %}
+<h1>{% trans "Welcome, " %}{{user}}</h1>
+<ul>
+    <li><a href="{% url "new_values" %}">{% trans "第一次上手KidsUpper" %}</a></li>
+    <li><a href="{% url "add_values" %}">{% trans "記錄孩子今天的生活" %}</a></li>
+    <li><a href="{% url "height-list" %}">{% trans "身高統計" %}</a></li>
+    <li><a href="{% url "weight-list" %}">{% trans "體重統計" %}</a></li>
+    <li><a href="{% url "sleep-list" %}">{% trans "睡眠統計" %}</a></li>
+    <li><a href="{% url "exercise-list" %}">{% trans "運動統計" %}</a></li>
+    <li><a href="{% url "meal-list" %}">{% trans "飲食記錄" %}</a></li>
+    
+</ul>
+{% endblock %}
+
+{% block content%}{% endblock content %}
